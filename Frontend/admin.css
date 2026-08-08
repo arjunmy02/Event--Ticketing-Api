@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1e293b;
+}
+
+/* ================================
+   ADMIN HEADER
+================================ */
+
+.admin-header {
+    background: #0f172a;
+    color: white;
+
+    padding: 18px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.admin-header p {
+    margin: 5px 0 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* ================================
+   LOGOUT
+================================ */
+
+#logout-btn {
+    width: auto;
+    margin: 0;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ef4444;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#logout-btn:hover {
+    background: #dc2626;
+}
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.admin-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+/* ================================
+   WELCOME
+================================ */
+
+.welcome-admin {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 30px;
+}
+
+.welcome-admin h2 {
+    margin-top: 0;
+    text-align: left;
+    font-size: 28px;
+}
+
+.welcome-admin p {
+    color: #64748b;
+}
+
+/* ================================
+   ADMIN CARDS
+================================ */
+
+.admin-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.admin-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.admin-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.admin-card span {
+    font-size: 45px;
+}
+
+.admin-card h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.admin-card p {
+    color: #64748b;
+
+    line-height: 1.5;
+
+    min-height: 45px;
+}
+
+.admin-card button {
+    width: auto;
+
+    margin: 15px 0 0;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.admin-card button:hover {
+    background: #1d4ed8;
+}
+
+/* ================================
+   ADMIN INFORMATION
+================================ */
+
+.admin-info {
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    padding: 25px;
+
+    margin-top: 30px;
+
+    border-radius: 10px;
+}
+
+.admin-info h2 {
+    text-align: left;
+
+    margin-top: 0;
+}
+
+.admin-info p {
+    color: #475569;
+
+    line-height: 1.6;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+        padding: 15px 20px;
+    }
+
+    .admin-header h1 {
+        font-size: 20px;
+    }
+
+    .admin-container {
+        width: 92%;
+    }
+}

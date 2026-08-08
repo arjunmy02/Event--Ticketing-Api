@@ -1,0 +1,186 @@
+
+        /* ========================================
+           BOOKING PAGE
+        ======================================== */
+
+        .booking-page {
+            min-height: 100vh;
+            background: #f4f6f9;
+        }
+
+
+        /* BOOKING CONTAINER */
+
+        .booking-wrapper {
+            width: 90%;
+            max-width: 900px;
+
+            margin: 50px auto 80px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1.2fr;
+
+            gap: 25px;
+        }
+
+
+        /* EVENT INFORMATION */
+
+        .booking-event-card {
+            background: #0f172a;
+
+            color: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .booking-event-card .booking-label {
+            color: #93c5fd;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        #event-name {
+            font-size: 28px;
+
+            margin: 15px 0 25px;
+        }
+
+        .event-info {
+            color: #cbd5e1;
+
+            margin: 15px 0;
+
+            font-size: 15px;
+        }
+
+
+        /* FORM CARD */
+
+        .booking-form-card {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .booking-form-card h2 {
+            text-align: left;
+
+            color: #1e293b;
+
+            margin-top: 0;
+        }
+
+        .booking-description {
+            color: #64748b;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* INPUTS */
+
+        .booking-input-group {
+            margin-bottom: 18px;
+        }
+
+        .booking-input-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #334155;
+
+            font-size: 14px;
+
+            font-weight: bold;
+        }
+
+        .booking-input-group input {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 12px 14px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            font-size: 14px;
+        }
+
+        .booking-input-group input:focus {
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 3px rgba(37,99,235,0.1);
+        }
+
+
+        /* CONFIRM BUTTON */
+
+        #confirm-btn {
+            width: 100%;
+
+            margin: 10px 0 0;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        #confirm-btn:hover {
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            .booking-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-event-card,
+            .booking-form-card {
+                padding: 28px;
+            }
+
+        }
