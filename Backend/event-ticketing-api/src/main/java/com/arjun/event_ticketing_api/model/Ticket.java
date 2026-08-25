@@ -3,6 +3,8 @@ package com.arjun.event_ticketing_api.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 
@@ -13,10 +15,14 @@ public class Ticket {
     @Id
     @GeneratedValue
     private Long  ticketId;
-    private String customerName;
-    private int  seatsBooked;
     private Long  bookedAt;
     private Long totalPrice;
+
+    private String customerName;
+
+    @Min(value = 1, message = "Seats booked must be at least 1")
+    private int seatsBooked;
+
 
     public Long getEventId() {
         return eventId;

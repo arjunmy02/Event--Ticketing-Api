@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Event {
@@ -12,10 +14,18 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Event name is required")
     private String eventName;
+
+    @NotBlank(message = "Location is required")
     private String location;
+
+    @Min(value = 1, message = "Available seats must be at least 1")
     private int availableSeats;
+
+    @Min(value = 0, message = "Ticket price cannot be negative")
     private Long ticketPrice;
+
 
     public Event() {
     }
