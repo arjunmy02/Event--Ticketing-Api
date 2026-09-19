@@ -1,40 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Eventify | Book Ticket</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+
+
 </head>
+
+
 <body>
 
-<section class="booking-title">
 
-    <h2>Book Your Ticket</h2>
-    <p>Complete the form below to reserve your seat.</p>
+<div class="booking-page">
 
-    <h2 id="event-name"></h2>
 
-    <p id="event-location"></p>
+<!-- ========================================
+     HEADER
+======================================== -->
 
-    <p id="event-date"></p>
+<header class="main-header">
 
-    <p id="event-seats"></p>
+    <div class="brand">
+        🎟️ EVENTIFY
+    </div>
 
-    <p id="event-price"></p>
+    <p>
+        Discover. Book. Experience.
+    </p>
 
-    <input type="text" id="name" placeholder="Enter Name">
+</header>
 
-    <input type="email" id="email" placeholder="Enter Email">
 
-    <input type="tel" id="phone" placeholder="Enter Phone Number">
+<!-- ========================================
+     NAVIGATION
+======================================== -->
 
-    <input type="number" id="tickets" placeholder="Number of Tickets">
+<nav class="main-nav">
 
-    <button id="confirm-btn">Confirm Booking</button>
+    <div class="nav-links">
 
-</section>
+        <a href="index.html">
+            🏠 Home
+        </a>
+
+        <a href="events.html" class="active">
+            🎫 Events
+        </a>
+
+        <a href="my-booking.html">
+            📖 My Bookings
+        </a>
+
+        <div class="user-area">
+
+            <span id="logged-user">
+                👤 User
+            </span>
+
+            <button id="user-logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ========================================
+     BOOKING
+======================================== -->
+
+<div class="booking-wrapper">
+
+
+    <!-- EVENT INFORMATION -->
+
+    <div class="booking-event-card">
+
+        <div class="booking-label">
+            EVENT DETAILS
+        </div>
+
+        <h2 id="event-name">
+            Event Name
+        </h2>
+
+        <p id="event-location"
+           class="event-info">
+            📍 Location
+        </p>
+
+        <p id="event-date"
+           class="event-info">
+            📅 Date
+        </p>
+
+        <p id="event-seats"
+           class="event-info">
+            🎟️ Available Seats
+        </p>
+
+        <p id="event-price"
+           class="event-info">
+            💰 Ticket Price
+        </p>
+
+    </div>
+
+
+    <!-- BOOKING FORM -->
+
+    <div class="booking-form-card">
+
+        <h2>
+            Book Your Ticket
+        </h2>
+
+        <p class="booking-description">
+            Complete the form below to reserve your seat.
+        </p>
+
+
+        <div class="booking-input-group">
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+        </div>
+
+
+        <div class="booking-input-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+        </div>
+
+
+        <div class="booking-input-group">
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+            >
+
+        </div>
+
+
+        <div class="booking-input-group">
+
+            <label for="tickets">
+                Number of Tickets
+            </label>
+
+            <input
+                type="number"
+                id="tickets"
+                placeholder="Number of tickets"
+                min="1"
+            >
+
+        </div>
+
+
+        <button id="confirm-btn">
+            Confirm Booking
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer class="main-footer">
+
+    <div class="footer-brand">
+        🎟️ EVENTIFY
+    </div>
+
+    <p>
+        Discover. Book. Experience.
+    </p>
+
+    <p class="copyright">
+        © 2026 Eventify. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</div>
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
